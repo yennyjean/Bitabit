@@ -1,0 +1,156 @@
+body{
+    margin:0;
+    padding:20px;
+    font-family:Arial, sans-serif;
+    background:#e8f5e9;
+}
+
+.container{
+    display:grid;
+    grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "content right"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    gap:5px;
+}
+
+.header,
+.navbar,
+.content,
+.right,
+.footer{
+    background:white;
+    border:2px solid #2e7d32;
+    padding:15px;
+}
+
+
+.header{
+    grid-area:header;
+    text-align:center;
+    background:#c8e6c9;
+}
+
+.logo{
+    width:90px;
+    display:block;
+    margin:auto;
+}
+
+
+.navbar{
+    grid-area:navbar;
+    text-align:center;
+    background:#388e3c;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 30px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.navbar a:hover{
+    color:#c8e6c9;
+}
+
+
+.content{
+    grid-area:content;
+}
+
+.content h2{
+    color:#1b5e20;
+    text-align:center;
+}
+
+.images{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.images img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border:3px solid #4caf50;
+    border-radius:10px;
+}
+
+
+.right{
+    grid-area:right;
+    background:#f1f8e9;
+}
+
+label{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+    color:#1b5e20;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #66bb6a;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+textarea{
+    height:150px;
+}
+
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1b5e20;
+}
+
+
+.footer{
+    grid-area:footer;
+    text-align:center;
+    color:white;
+    background:#388e3c;
+}
+
+
+@media(max-width:768px){
+    .container{
+        grid-template-areas:
+            "header"
+            "navbar"
+            "content"
+            "right"
+            "footer";
+
+        grid-template-columns:1fr;
+    }
+
+    .navbar a{
+        display:block;
+        margin:10px 0;
+    }
+}
